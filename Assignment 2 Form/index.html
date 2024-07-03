@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+      
+
+        form label {
+            display: inline-block;
+            width: 90px;
+            
+            text-align: right
+            
+        }
+
+        form input {
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <fieldset style="background-color:brown; color:black">
+                <legend style="background-color: cornflowerblue;">Personal Data</legend>
+                <fieldset style=" background-color: darkgoldenrod; color:black">
+                    <legend style="background-color: cornflowerblue;"><br /><br />Your Name<br /><br /><br /></legend>
+                    <br /><br /><br />
+                    <label>first name : </label>
+                    <input name="firstName" type="text" />
+                    <br />
+                    <label>second name: </label>
+                    <input name="secondName" type="text" />
+                    <br />
+                </fieldset>
+                <br /><br /><br />
+                <label for="Phone">Your Phone : </label>
+                <input name="Phone" type="tel" id="Phone" />
+                <br />
+                <label for="email">Email : </label>
+                <input name="email" type="email" id="email" />
+                <br />
+                <label for="pass">Password : </label>
+                <input name="pass" type="password" id="pass" />
+                <br />
+                <label for="repass">Repassword :</label>
+                <input name="repass" type="password" id="repass" />
+                <br />
+                <br />
+                <br />
+                <input name="gender" type="radio" vlaue="male" />
+                <label>Male </label>
+                
+                <br />
+                <input name="gender" type="radio" value="female" />
+                <label>Female </label>
+              
+                <br /><br /><br />
+                <input type="checkbox" id="student" name="student" required>
+                <label for="student">Student</label>
+                <br />
+                <input type="checkbox" id="graduated" name="graduated">
+                <label for="graduated">Graduated</label>
+                <br /><br />
+                <select name="Cars">
+                    <option disabled selected>Cars</option>
+                    <optgroup label="Italy">
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                    </optgroup>
+                    <optgroup label="German">
+                        <option value="BMW">BMW</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    </optgroup>
+                </select>
+                <br /><br /><br />
+                
+                <button style="background-image: url(Img/1.jpg);background-repeat: no-repeat; background-size: 100% 100%; width: 100px; height: 31px; border-radius: 5px;"></button>
+            </fieldset>
+
+
+        </form>
+    </div>
+
+
+
+</body>
+
+
+
+
+
+</html>

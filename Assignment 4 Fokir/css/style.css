@@ -1,0 +1,1063 @@
+/* ----------------------------------------Global----------------------------- */
+html{
+    /* to make the anchor scroll smoothly when we navigate to aspecific section */
+    scroll-behavior: smooth !important;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+}
+
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+
+}
+
+a:hover {
+    color: #ff305b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    color: #555555;
+}
+
+img,
+iframe {
+    width: 100%;
+
+}
+
+
+.clr {
+    clear: both;
+}
+
+/* for every section is heading  */
+
+.main-heading {
+
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    color: #333;
+    position: relative;
+}
+
+.main-heading::before,
+.main-heading::after {
+    content: '';
+    position: absolute;
+    background-color: #ff305b;
+
+
+}
+
+.main-heading::before {
+
+    width: 100px;
+    height: 15px;
+    background-color: transparent;
+    border-top: #ff305b solid 1px;
+    border-bottom: #ff305b solid 1px;
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+.main-heading::after {
+
+    width: 160px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+
+}
+
+/* center the sections */
+.container {
+    width: 80%;
+    margin: auto;
+
+}
+
+/* for every layer in the page */
+.layer {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+/* for padding every section */
+.section {
+    padding: 60px 0px;
+    text-align: center;
+}
+
+
+
+/*  for buttons  */
+button {
+    color: #fff;
+    background-color: #ff305b;
+    border: transparent;
+    padding: 14px 24px;
+    border-radius: 5px;
+    margin: 15px 0px 0px 15px;
+    font-weight: 500;
+
+}
+
+button:hover {
+    background-color: red;
+}
+
+/* ----------------------------------------End-Global----------------------------- */
+
+
+
+
+
+
+
+/* ----------------------------------------Home--------------------------------- */
+.home {
+    background-image: url(../img/hero\ img.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    height: 100vh;
+    position: relative;
+
+
+
+}
+
+/* .home .layer {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .8);
+} */
+
+
+
+
+/* Nav */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* background-color: aqua; */
+    padding: 20px;
+
+}
+
+.nav .container {
+    width: 75%;
+    margin: auto;
+}
+
+.nav .title {
+    float: left;
+}
+
+.nav .title a {
+    /* float: left; */
+    padding: 18px 0px;
+    color: #ff305b;
+    font-size: 24px;
+    font-weight: 800;
+
+
+}
+
+.nav .links {
+    float: right;
+
+}
+
+.nav .links li {
+    padding: 0px 10px;
+}
+
+.nav .links li a {
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.5s color;
+
+}
+
+/* for media query */
+.nav .bar {
+    float: right;
+    display: none;
+}
+
+/* .nav .links li a:hover {
+    color: #ff305b;
+
+} */
+
+@media only screen and (max-width: 600px) {
+    .nav .links {
+        display: none;
+    }
+
+    .nav .bar {
+        display: initial;
+    }
+
+}
+
+@media only screen and (min-width: 601px)and (max-width: 850px) {
+    .nav .links li a {
+        font-size: 12px;
+    }
+
+    .nav .links li {
+        padding: 0px 5px;
+    }
+}
+
+
+/* Content */
+
+.home .content {
+    font-family: 'Source Sans 3', sans-serif;
+    text-align: center;
+    /* not the best option but i use it for learning */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* background-color: aqua; */
+
+}
+
+.home .content h3 {
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.home .content h1 {
+    color: #ff305b;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.home .content h4 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 26px;
+
+}
+
+.animation::after {
+    content: '';
+    animation: animation 5s infinite;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .home .content h4,
+    .home .content h1,
+    .home .content h3 {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (min-width: 601px)and (max-width: 850px) {
+
+    .home .content h4,
+    .home .content h1,
+    .home .content h3 {
+        font-size: 30px;
+    }
+}
+
+
+
+
+@keyframes animation {
+
+    0% {
+        content: 'd';
+    }
+
+    3% {
+        content: 'de';
+    }
+
+    6% {
+        content: 'des';
+    }
+
+    9% {
+        content: 'desi';
+    }
+
+    12% {
+        content: 'desig';
+    }
+
+    15% {
+        content: 'design';
+    }
+
+    18% {
+        content: 'designe';
+    }
+
+    21% {
+        content: 'designer';
+    }
+
+    24% {
+        content: 'designe';
+    }
+
+    27% {
+        content: 'design';
+    }
+
+    30% {
+        content: 'desig';
+    }
+
+    33% {
+        content: 'desi';
+    }
+
+    36% {
+        content: 'des';
+    }
+
+    39% {
+        content: 'de';
+    }
+
+    42% {
+        content: 'd';
+    }
+
+    45% {
+        content: 'd';
+    }
+
+    48% {
+        content: 'de';
+    }
+
+    51% {
+        content: 'dev';
+    }
+
+    54% {
+        content: 'deve';
+    }
+
+    57% {
+        content: 'devel';
+    }
+
+    60% {
+        content: 'develo';
+    }
+
+    63% {
+        content: 'develop';
+    }
+
+    66% {
+        content: 'developer';
+    }
+
+    69% {
+        content: 'develop';
+    }
+
+    72% {
+        content: 'develo';
+    }
+
+    75% {
+        content: 'devel';
+    }
+
+    78% {
+        content: 'deve';
+    }
+
+    81% {
+        content: 'dev';
+    }
+
+    84% {
+        content: 'de';
+    }
+
+    90% {
+        content: 'd';
+    }
+
+
+}
+
+
+
+/* ----------------------------------------End Home----------------------------- */
+
+
+
+
+
+
+
+/* ----------------------------------------about-me----------------------------- */
+
+
+.about {
+
+    padding: 60px 0px;
+
+}
+
+.about .container {
+    width: 70%;
+    margin: auto;
+    /* background-color: aqua; */
+
+
+}
+
+
+.about .left-content {
+    display: inline-block;
+    /* width: 45%; */
+    margin-left: 50px;
+    border: 8px solid #555555;
+    border-radius: 10px;
+    position: relative;
+}
+
+.about .left-content .box {
+    position: relative;
+    top: 25px;
+    left: 20px;
+
+}
+
+.about .left-content .layer {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .58);
+    border-radius: 5px;
+    transform: translate(0, 100%);
+    /* display: none; */
+    visibility: hidden;
+    transition: 0.25s all;
+
+
+}
+
+.about .box:hover .layer {
+    visibility: initial;
+    /* display: block; */
+    transform: translate(0, 0);
+
+}
+
+.about .left-content .layer ul {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+
+}
+
+.about .left-content .layer li {
+
+    padding: 5px;
+
+
+}
+
+.about .left-content .layer a:hover {
+
+    color: #ff305b;
+}
+
+.about .left-content .layer i {
+
+    font-size: 20px;
+}
+
+.about .left-content img {
+
+    border-radius: 5px;
+
+}
+
+
+
+
+.about .right-content {
+    display: inline-block;
+    width: 55%;
+    padding-left: 60px;
+    vertical-align: top;
+    text-align: left;
+
+
+}
+
+.about .right-content h2::before {
+    content: "";
+    background-color: #ff305b;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    left: 0;
+    /* padding-right: 15px; */
+    /* font-size: 50px; */
+
+}
+
+
+.about .right-content h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    position: relative;
+    color: #333;
+}
+
+.about .right-content p {
+    padding-bottom: 25px;
+    border-bottom: dashed 1px #999999;
+
+
+
+}
+
+.about .right-content .bot-info {
+    padding: 25px 0px;
+
+}
+
+.about .right-content li {
+    width: 49%;
+    padding: 10px;
+    color: #555555;
+}
+
+.about .right-content li span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* .about .right-content button {
+    color: #fff;
+    background-color: #ff305b;
+    border: transparent;
+    padding: 14px 24px;
+    border-radius: 5px;
+    margin: 15px 0px 0px 15px;
+    font-weight: 500;
+
+}
+
+.about .right-content button:hover {
+    background-color: red;
+} */
+
+.about .right-content button i {
+    margin-left: 5px;
+}
+
+
+
+
+@media only screen and (max-width: 1220px) {  
+    .about .left-content .box {
+        top: 0;
+        left: 0;
+    }
+
+    .about .left-content {
+        border: none
+    }
+
+    .about .right-content  {
+        width: 100%;
+    }
+    .about button  {
+        margin: 15px 15px 0px 0px;
+    }
+    .about .right-content li {
+        width: 100%;
+        
+    }
+}
+
+
+
+
+
+/* ----------------------------------------End about-me----------------------------- */
+
+
+
+
+/* ----------------------------------------Services----------------------------- */
+.services {
+
+    background-color: #f1f1f1;
+}
+
+/* .services .container {
+    width: 80%;
+    margin: auto;
+
+} */
+
+
+.services .content .info {
+    width: 25%;
+    float: left;
+    padding: 20px;
+    transition: all 1s;
+
+}
+
+.services .content .info:hover {
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 8px #ddd;
+
+}
+
+
+
+.services .content .info i {
+    font-size: 36px;
+    color: #ff305b;
+    transition: all 0.5s ease-in-out;
+    /* icofont wasn't working when scaling because the display was inline */
+    display: block;
+
+
+}
+
+.services .content .info:hover i {
+    transform: scale(1.5);
+
+}
+
+
+.services .content .info h3 {
+    margin: 15px 0px;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .services .content .info {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 601px)and (max-width: 850px) {
+    .services .content .info {
+        width: 50%;
+    }
+}
+
+/* ----------------------------------------End Services----------------------------- */
+
+
+/* ----------------------------------------Portfolio----------------------------- */
+
+.portfolio li {
+    padding: 15px;
+
+}
+
+.portfolio li a {
+    color: #333;
+
+}
+
+.portfolio li a:hover {
+    color: #ff305b;
+}
+
+
+.portfolio .port-item {
+    float: left;
+    width: 33.3%;
+    padding: 15px;
+}
+
+.portfolio .port-item .box {
+    position: relative;
+
+}
+
+.portfolio .port-item .layer {
+
+    opacity: 0;
+}
+
+.portfolio .port-item:hover .layer {
+
+    opacity: 1;
+}
+
+.portfolio .port-item .ico i {
+    color: #ff305b;
+    font-size: 25px;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .portfolio .port-item {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 601px)and (max-width: 850px) {
+    .portfolio .port-item {
+        width: 50%;
+    }
+}
+
+
+/* ----------------------------------------End Portfolio----------------------------- */
+
+
+
+/* ---------------------------------------- Area----------------------------- */
+.area {
+    background-color: #f1f1f1;
+}
+
+.part {
+    float: left;
+    width: 25%;
+    padding: 25px;
+}
+
+.part h3 {
+    margin: 16px 0px;
+    font-weight: 800;
+}
+
+.part h5 {
+    color: #555555;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.part i {
+    color: #ff305b;
+    font-size: 30px;
+}
+
+/* i think this part is good without media query (●'◡'●) */
+
+/* ----------------------------------------End Area----------------------------- */
+
+
+/* ----------------------------------------FeedBack----------------------------- */
+.feedback .container {
+    margin: auto;
+    width: 50%;
+
+}
+
+.card {
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 50px;
+}
+
+
+.card::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 200px solid transparent;
+    border-left: 200px solid #ff305b;
+    border-bottom: 200px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    /* transform: translateX(-125px) rotate(45deg); */
+}
+
+.round-img {
+    width: 30%;
+    float: left;
+    overflow: hidden;
+    width: 110px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 999;
+}
+
+.card .content {
+    float: left;
+    width: 70%;
+    text-align: left;
+    margin-left: 30px;
+
+}
+
+.card .content p {
+    padding: 10px 0px;
+
+}
+
+.card .content .fa-location-dot {
+    padding-right: 5px;
+
+}
+
+/* @media only screen and (max-width: 600px) {
+  
+} */
+
+@media only screen and (max-width: 850px) {
+    .feedback .container {
+        margin: auto;
+        width: 80%;
+    }
+
+    .card .content {
+        width: 100%;
+    }
+
+    .round-img {
+        transform: translateX(100%);
+    }
+}
+
+
+/* ----------------------------------------End FeedBack----------------------------- */
+
+
+
+
+
+/* ----------------------------------------Blog----------------------------- */
+
+
+.blog {
+    background-color: #f1f1f1;
+}
+
+
+.blog .content {
+    width: 90%;
+    /* background-color: blueviolet; */
+    margin: auto;
+}
+
+.blog .content .info {
+    width: 33.333%;
+    float: left;
+    padding: 0px 20px;
+    text-align: left;
+}
+
+/* for colroing the content of info */
+.blog .content .info .inner {
+    background-color: white;
+
+}
+
+/* for padding the content without the img */
+.blog .content .info .inner .box {
+    padding: 20px 20px 40px 20px;
+}
+
+.blog .content .info p {
+    padding: 10px 0px;
+}
+
+
+.blog .content .info .a-titles {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+
+.blog .info a {
+    color: #333;
+
+}
+
+/* why should i do it again to work even if  i typed it above in the global????! */
+.blog .info a:hover,
+i:hover {
+    color: #ff305b;
+}
+
+
+@media only screen and (max-width: 1220px) {
+    .blog .content .info {
+        width: 100%;
+
+    }
+
+    iframe {
+        height: 400px;
+    }
+
+}
+
+
+
+/* ----------------------------------------End Blog----------------------------- */
+
+
+
+
+/* ----------------------------------------Contact----------------------------- */
+
+
+.contact .container {
+    width: 70%;
+    margin: auto;
+}
+
+
+
+.row1 #userName {
+    float: left;
+    width: 45%;
+    /* margin: 15px 0 15px 0px; */
+
+
+
+}
+
+.row1 #userEmail {
+    float: right;
+    width: 45%;
+    /* margin: 15px 0 15px 0px; */
+
+
+}
+
+input,
+textarea {
+    height: 40px;
+    padding: 6px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: #ccc 1px solid;
+    /* inset make the shadow from the inside instead of the outside */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    margin: 15px 0 15px 0px;
+    width: 100%;
+    outline-color: #ff305b;
+
+
+}
+
+
+.row3 textarea {
+    height: 100px;
+    resize: both;
+    /* textarea will not inherit until you mark it so*/
+    font-family: inherit;
+
+
+}
+
+/* .row4 button {
+    color: #fff;
+    background-color: #ff305b;
+    border: transparent;
+    padding: 14px 24px;
+    border-radius: 5px;
+    margin: 15px 0px 0px 15px;
+    font-weight: 500;
+
+} */
+/* ----------------------------------------End Contact----------------------------- */
+
+
+
+
+
+/* ----------------------------------------Footer----------------------------- */
+
+.footer {
+    background-color: #353330;
+}
+
+.footer .content li {
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+.footer p {
+    color: #fff;
+}
+
+.footer p a {
+    color: #ff305b;
+
+}
+
+.footer p a:hover {
+    text-decoration: underline;
+
+}
+
+/* ----------------------------------------End Footer----------------------------- */
