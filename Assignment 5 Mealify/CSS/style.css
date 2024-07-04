@@ -1,0 +1,202 @@
+:root {
+  /* font */
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+
+  /* light mode */
+
+  /* color to change in dark mode */
+  --color-default: #212529;
+  --color-primary: hsl(0, 84%, 44%);
+  --color-seondary: #37373f;
+  --color-tertiary: #7f7f90;
+
+  /* bg to change in dark mode */
+  --nav-background-color: #fff;
+  --section-bg-one: #eee;
+  --section-bg-two: #fff;
+
+  /* selections to change in dark mode */
+
+  --selection-bgcolor: #dc5858;
+  --selection-color: #fff;
+
+  /* dark mode */
+
+  /* 
+  */
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-default);
+  height: 300dvh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+  margin: 10px;
+}
+img {
+  width: 100%;
+}
+
+::selection {
+  background-color: var(--selection-bgcolor);
+  color: var(--selection-color);
+}
+
+/*---------------------------------------------- NavBar-------------------------------------------------*/
+
+nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  background-color: var(--nav-background-color);
+  box-shadow: 0px 0px 14px 0px #ddd;
+}
+nav .container {
+  width: 85%;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+}
+nav a {
+  position: relative;
+}
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0px;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: 400ms all;
+}
+
+/* hover then before the class then the element (￣ ‘i ￣;)  */
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.logo::after {
+  content: ".";
+  color: var(--color-primary);
+}
+
+nav i {
+  cursor: pointer;
+}
+
+.mode #checkbox1 {
+  /* display: none; */
+}
+
+body:has(.mode input:checked) {
+  --color-default: #fff;
+  --color-primary: hsl(35, 72%, 44%);
+  --color-seondary: #fff;
+  --color-tertiary: #9f9f9f;
+
+  --nav-background-color: hsl(0, 0%, 9%);
+  --section-bg-one: #252525;
+  --section-bg-two: #202020;
+
+  --selection-bgcolor: hsl(35, 72%, 44%);
+  --selection-color: #252525;
+}
+
+/*----------------------------------------------End-NavBar-------------------------------------------------*/
+
+/*---------------------------------------------- Header-------------------------------------------------*/
+header {
+  background-color: var(--section-bg-one);
+  height: 100dvh;
+  margin-block: 50px;
+  overflow: auto;
+}
+header .container {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  height: 100%;
+  /* padding: 40px; */
+  justify-content: space-between;
+  align-items: center;
+}
+.left-content {
+  width: 40%;
+}
+.left-content h2 {
+  font-family: var(--font-primary);
+  font-size: 4rem;
+}
+
+.right-content {
+  width: 40%;
+}
+
+.right-content img:hover {
+  animation: shake 1s alternate infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+  /* 
+  from {
+    transform: rotate(15deg);
+  }
+  to {
+    transform: rotate(-15deg);
+  } */
+}
+
+/*----------------------------------------------End-Header-------------------------------------------------*/
